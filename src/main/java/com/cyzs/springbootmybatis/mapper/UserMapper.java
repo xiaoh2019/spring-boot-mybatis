@@ -2,6 +2,8 @@ package com.cyzs.springbootmybatis.mapper;
 
 import com.cyzs.springbootmybatis.bean.User;
 
+import java.util.List;
+
 /**
  * @description:
  * @author: xh
@@ -10,4 +12,6 @@ import com.cyzs.springbootmybatis.bean.User;
 public interface UserMapper {
 
     User findUserById(Integer id);
+
+    List<User> findPage();
 }

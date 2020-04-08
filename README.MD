@@ -8,4 +8,22 @@
    第三步 创建mybatis的配置文件类，创建Druid数据源
    第四步 创建UserController，启动应用
 
-3.
+3.分页
+  `<dependency>
+       <groupId>com.github.pagehelper</groupId>
+       <artifactId>pagehelper-spring-boot-starter</artifactId>
+       <version>1.2.10</version>
+   </dependency>`
+     配置
+    `pagehelper:
+       helper-dialect: mysql
+       reasonable: true
+       support-methods-arguments: true
+       params: count=countSql`
+      用法
+     `PageHelper.startPage(pageNum, pageSize);
+      List<User> page = userMapper.findPage();
+      PageInfo<User> userPageInfo = new PageInfo<>(page);
+      return userPageInfo;`  
+     
+4.
