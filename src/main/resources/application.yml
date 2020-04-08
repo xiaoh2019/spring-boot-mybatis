@@ -1,0 +1,17 @@
+#端口
+server:
+  port: 8081
+
+#mybatis配置
+#mybatis:
+#  mapper-locations:
+
+#spring配置
+spring:
+  datasource:
+    username: root
+    password: 123qwe
+    url: jdbc:mysql://localhost:3306/mybatis-test?serverTimezone=UTC&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
